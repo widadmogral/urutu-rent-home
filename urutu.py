@@ -193,7 +193,7 @@ def get_df_with_columns(listing_results):
 
 def save_df_to_disk(df_listings, extraction_date):
    
-    df_listings.to_csv(f"immo24_listings_{extraction_date}.csv", index=False)
+    df_listings.to_csv("listings.csv", index=False)
 
 
 
