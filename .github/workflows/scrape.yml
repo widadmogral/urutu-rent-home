@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '1 * * * *'
+    - cron:  '7 * * * *'
 
 jobs:
   scheduled:
@@ -11,6 +11,9 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
+    - name: Install requirements.txt
+      run: |-
+        pip3 install requirements.txt
     - name: Fetch latest data
       run: |-
         python3  urutu.py 
